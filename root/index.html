@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!--meta data-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!--title-->
+    <title>KYC Chain</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts. Need to be connected to internet for some fonts to work -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Theme CSS -->
+    <link href="css/agency.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- JS source files -->
+    <script type="text/javascript" src="./dist/web3.min.js"></script>
+    <script type="text/javascript">
+        if (typeof window.web3 !== "undefined" && typeof window.web3.currentProvider !== "undefined") {
+            var web3 = new Web3(window.web3.currentProvider);
+        } else {
+            var web3 = new Web3();
+        }
+    </script>
+    <script language="JavaScript" type="text/javascript" src="./js/contractDetails.js"></script>
+    <script language="JavaScript" type="text/javascript" src="./index.js"></script>
+
+    <!-- Navigation bar-->
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container">
+            <!-- For better display in small screen sizes -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                    </button>
+                <a class="navbar-brand page-scroll" href="#page-top">KYC chain</a>
+            </div>
+
+            <!-- Different links for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                <!--for easier navigation in the page-->
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#portfolio">Features</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#team">Team</a>
+                    </li>
+                </ul>
+
+                <!--signup and login-->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a data-toggle="modal" data-target="#signUp" id="sign_up"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a data-toggle="modal" data-target="#logIn" id="log_in"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Tell Me More -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-heading">KYC chain</div>
+                <div class="intro-lead-out">Be a part of the global KYC-Chain......</div>
+                <a href="#services" class="page-scroll btn btn-xl">Tell Me More</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services -->
+    <section id="services">
+        <div class="container">
+
+            <!--heading-->
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Services</h2>
+                    <h3 class="section-subheading text-muted">One stop solution for all your KYC troubles.</h3>
+                </div>
+            </div>
+
+
+            <div class="row text-center">
+
+                <!--service 1-->
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fa fa-cubes fa-stack-1x fa-inverse"></i>
+                        </span>
+                    <h4 class="service-heading">Distrubted Ledger</h4>
+                    <p class="text-muted">Distributed ledger technology provides a single source of truth for your database. The cryptographic framework of the block-chain ensures that your data cannot be tampered with, thus providing a secure source for compliance checks.
+                    </p>
+                </div>
+
+                <!--service 2-->
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fa fa-users fa-stack-1x fa-inverse"></i>
+                        </span>
+                    <h4 class="service-heading">Customer Rating</h4>
+                    <p class="text-muted">Use the information in the block-chain to gauge the trustworthiness of your customers</p>
+                </div>
+
+                <!--service 3-->
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fa fa-bank fa-stack-1x fa-inverse"></i>
+                        </span>
+                    <h4 class="service-heading">Bank Rating</h4>
+                    <p class="text-muted">Find out how reliable a particular KYC is based on previous performance of the bank </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid Section -->
+    <section id="portfolio" class="bg-light-gray">
+        <div class="container">
+
+            <!--heading-->
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Features</h2>
+                    <h3 class="section-subheading text-muted">Click on each feature to know more...</h3>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <!--feature 1-->
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/feature_1.jpg" class="img-responsive" alt="" style='width:100%; height:220px;'>
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Transparency</h4>
+                        <p class="text-muted">A Public Ledger</p>
+                    </div>
+                </div>
+
+                <!--feature 2-->
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal" style='width:100%; height:220px;'>
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/feature_2.jpg" class="img-responsive" alt="" style='width:100%;'>
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Immutable</h4>
+                        <p class="text-muted">All changes are recorded</p>
+                    </div>
+                </div>
+
+                <!--feature 3-->
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal" style='width:100%; height:220px;'>
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/feature_3.jpg" class="img-responsive" alt="" style='width:100%; height:220px;'>
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Secure </h4>
+                        <p class="text-muted">State-of-the-art encryption standards</p>
+                    </div>
+                </div>
+
+                <!--feature 4-->
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/feature_4.jpg" class="img-responsive" alt="" style='width:100%; height:220px;'>
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Efficient</h4>
+                        <p class="text-muted">Redundant KYC checks eliminated</p>
+                    </div>
+                </div>
+
+                <!--feature 5-->
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/feature_5.jpg" class="img-responsive" alt="" style='width:100%; height:220px;'>
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Privacy</h4>
+                        <p class="text-muted">No one can access your data without your permission</p>
+                    </div>
+                </div>
+
+                <!--feature 6-->
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/feature_6.png" class="img-responsive" alt="" style='width:100%; height:220px;'>
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Compliance</h4>
+                        <p class="text-muted">Satisfies all regulatory compliances</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Team Section -->
+    <section id="team">
+        <div class="container">
+
+            <!--heading-->
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Our Amazing Team</h2>
+                    <h3 class="section-subheading text-muted">A couple of die-hard block-chain enthusiasts</h3>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <!--Neil-->
+                <div class="col-sm-6">
+                    <div class="team-member">
+                        <img src="img/team/1.jpg" class="img-responsive img-circle" alt="" style='width:250px; height:280px'>
+                        <h4>Neil Wilson</h4>
+                        <p class="text-muted">BITS Pilani</p>
+                    </div>
+                </div>
+
+                <!--Rudrakh-->
+                <div class="col-sm-6">
+                    <div class="team-member">
+                        <img src="img/team/2.jpg" class="img-responsive img-circle" alt="" style='width:250px; height:280px'>
+                        <h4>Rudrakh Panigrahi</h4>
+                        <p class="text-muted">BITS Pilani</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Each feature described in detail -->
+
+    <!-- Feature Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>Transparency</h2>
+                                <p class="item-intro text-muted">Any changes made to the registry is public</p>
+                                <img class="img-responsive img-centered" src="img/portfolio/feature_1.jpg" alt="">
+                                <p>Block-chain is based on the concept of distributed ledgers. Any and all changes made in the block-chain has to be validated by everyone in the network.</p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feature Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <h2>Immutable</h2>
+                                <p class="item-intro text-muted">Data is permanent</p>
+                                <img class="img-responsive img-centered" src="img/portfolio/feature_2.jpg" alt="">
+                                <p>Data stored in kyc-chain cannot be modified except through specially written smart contracts which always leave a trail of who accesed them.</p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feature Modal 3 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>Secure</h2>
+                                <p class="item-intro text-muted">Security like never before</p>
+                                <img class="img-responsive img-centered" src="img/portfolio/feature_3.jpg" alt="">
+                                <p>The Data in KYC chain is encrypted using the highly sophisticated SHA-256 encryption. The proof of work needed to modify the block-chain makes it next to impossible to change it
+                                </p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feature Modal 4 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>Efficient</h2>
+                                <p class="item-intro text-muted">Removes redundant KYC verifications</p>
+                                <img class="img-responsive img-centered" src="img/portfolio/feature_4.jpg" alt="">
+                                <p>You would no longer need to perform KYC verification for a customer who has been already verified by someone else. The distributed public ledger stores all KYC checks ever performed by all institutions and can be accesssed
+                                    by any member of kyc-chain</p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feature Modal 5 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>Privacy</h2>
+                                <p class="item-intro text-muted">Stringent Access Control</p>
+                                <img class="img-responsive img-centered" src="img/portfolio/feature_5.jpg" alt="">
+                                <p>The kyc of a person can only be accessed only with his permission. A secret key provided to each person in the block-chain is needed to access or modify his records</p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feature Modal 6 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>Compliance</h2>
+                                <p class="item-intro text-muted">Adheres to all governmental regulations</p>
+                                <img class="img-responsive img-centered" src="img/portfolio/feature_6.png" alt="">
+                                <p>You need not worry about being forced to pay fines because of some bank did not do it's KYC checks properly. KYC-chain assigns the risk to the institution which performs the KYC.
+                                </p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal for signUp-->
+    <div id="signUp" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!--Modal Content-->
+            <div class="modal-content">
+
+                <!--Modal Header-->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">X</button>
+                    <h3 align="center"> Register your Bank</h3>
+                </div>
+
+                <!--Modal Body-->
+                <div class="container">
+                    <div class="modal-body">
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <div class="control-group">
+                                    <!-- Name of Bank -->
+                                    <label class="control-label" for="username">Name of Bank</label>
+                                    <div class="controls">
+                                        <!--Take info from here and store it in the block-chain-->
+                                        <input type="text" id="username" name="username_1" placeholder="" class="input-xlarge">
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+
+
+                <div class="container">
+                    <div class="modal-body">
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <div class="control-group">
+                                    <!-- Name of Bank -->
+                                    <label class="control-label" for="username">Password</label>
+                                    <div class="controls">
+                                        <!--Take info from here and store it in the block-chain-->
+                                        <input type="text" id="password" name="password_s" placeholder="" class="input-xlarge">
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="modal-body">
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <div class="control-group">
+                                    <!-- Name of Bank -->
+                                    <label class="control-label" for="username">Registration No</label>
+                                    <div class="controls">
+                                        <!--Take info from here and store it in the block-chain-->
+                                        <input type="text" id="reg_no" name="reg_no" placeholder="" class="input-xlarge">
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+
+                <!--Modal Footer-->
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" data-dismiss="modal" id="sign_up" onclick="onSignUp()">Sign up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal for logIn-->
+    <div id="logIn" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!--Modal Content-->
+            <div class="modal-content">
+
+                <!--Modal Header-->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">X</button>
+                    <h3 align="center"> Log In </h3>
+                </div>
+
+                <!--Modal Body-->
+                <div class="container">
+                    <div class="modal-body">
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <div class="control-group">
+                                    <!-- Name of Bank -->
+                                    <label class="control-label" for="username">Name of Bank</label>
+                                    <div class="controls">
+                                        <!--Take info from here and store it in the block-chain-->
+                                        <input type="text" id="username_l" name="username_2" placeholder="" class="input-xlarge">
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+
+
+                <div class="container">
+                    <div class="modal-body">
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <div class="control-group">
+                                    <!-- Name of Bank -->
+                                    <label class="control-label" for="username">Password</label>
+                                    <div class="controls">
+                                        <!--Take info from here and store it in the block-chain-->
+                                        <input type="text" id="password_l" name="password_l" placeholder="" class="input-xlarge">
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+
+                <!--Modal Footer-->
+                <div class="modal-footer">
+                    <!--change the onclick so that it verifies account no from the blockchain-->
+                    <button type="submit" class="btn btn-primary" data-dismiss="modal" id="log_in" onclick="onLogin()">Log In</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
+
+
+    <!-- Theme JavaScript -->
+    <script src="js/agency.js"></script>
+
+</body>
+
+</html>

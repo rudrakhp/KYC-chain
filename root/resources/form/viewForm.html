@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Form1</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Theme CSS -->
+    <link href="../../css/agency.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" integrity="sha384-0s5Pv64cNZJieYFkXYOTId2HMA2Lfb6q2nAcx2n0RTLUnCAoTTsS0nKEO27XyKcY" crossorigin="anonymous"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" integrity="sha384-ZoaMbDF+4LeFxg6WdScQ9nnR1QC2MIRxA1O9KWEXQwns1G8UNyIEZIQidzb0T1fo" crossorigin="anonymous"></script>
+        <![endif]-->
+
+    <!--encryption decryption scripts-->
+    <script language="JavaScript" type="text/javascript" src="../../RSA_JS/jsbn.js"></script>
+    <script language="JavaScript" type="text/javascript" src="../../RSA_JS/jsbn2.js"></script>
+    <script language="JavaScript" type="text/javascript" src="../../RSA_JS/prng4.js"></script>
+    <script language="JavaScript" type="text/javascript" src="../../RSA_JS/rng.js"></script>
+    <script language="JavaScript" type="text/javascript" src="../../RSA_JS/rsa.js"></script>
+    <script language="JavaScript" type="text/javascript" src="../../RSA_JS/rsa2.js"></script>
+
+
+
+</head>
+
+<body>
+
+    <!-- JS source files -->
+    <script type="text/javascript" src="../../dist/web3.min.js"></script>
+    <script type="text/javascript">
+        if (typeof window.web3 !== "undefined" && typeof window.web3.currentProvider !== "undefined") {
+            var web3 = new Web3(window.web3.currentProvider);
+        } else {
+            var web3 = new Web3();
+        }
+    </script>
+    <script language="JavaScript" type="text/javascript" src="../../js/contractDetails.js"></script>
+
+
+    <ul class="nav nav-tabs navbar-inverse">
+        <li><a href="../bankHomePage.html">Back</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="form1" class="tab-pane fade in active">
+            <form class="well form-horizontal" id="contact_form">
+                <fieldset>
+
+                    <!-- Form Name -->
+                    <legend align="center">Personal Details</legend>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Customer rating</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <label class="control-label" id="kyc_no"><span class="stars" id = "customer_rating">3.5</span></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Username</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <label class="control-label" id="username">Null</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Text input-->
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">First Name</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <label class="control-label" id="first_name">Null</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Middle Name</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <label class="control-label" id="middle_name">Null</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Text input-->
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Last Name</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <label class="control-label" id="last_name">Null</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Occupation</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <label class="control-label" id="occupation">Null</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Income Range</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <label class="control-label" id="income_range">Null</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Select Basic -->
+
+
+                    <!-- Text input-->
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Date Of Birth</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <label class="control-label" id="DOB">Null</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- radio checks -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Gender</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <label class="control-label" id="gender_m">Null</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Full Residential Address</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <label class="control-label" id="address">Null</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Text area -->
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Phone number 1</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <label class="control-label" id="phone_1">Null</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Phone number 2</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <label class="control-label" id="phone_2">Null</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Email</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <label class="control-label" id="email">Null</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Country of Residence</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <label class="control-label" id="country_res">Null</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Bank Name</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <label class="control-label" id="bank_name">Null</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Bank rating</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <label class="control-label" id="kyc_no"><span class="stars" id = "bank_rating">3.5</span></label>
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- jQuery -->
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="../../js/agency.min.js"></script>
+
+    <!--Javascript for converting int to star rating-->
+    <script>
+        $.fn.stars = function() {
+            return $(this).each(function() {
+                $(this).html($('<span />').width(Math.max(0, (Math.min(5, parseFloat($(this).html())))) *
+                    16));
+            });
+        }
+        $(function() {
+            $('span.stars').stars();
+        });
+    </script>
+    <script language="JavaScript" type="text/javascript" src="./viewForm.js"></script>
+</body>
+
+</html>

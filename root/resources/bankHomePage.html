@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!--meta data-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!--title-->
+    <title>Home</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts. Need to be connected to internet for some fonts to work -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Theme CSS -->
+    <link href="../css/agency.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- JS source files -->
+    <script type="text/javascript" src="../dist/web3.min.js"></script>
+    <script type="text/javascript">
+        if (typeof window.web3 !== "undefined" && typeof window.web3.currentProvider !== "undefined") {
+            var web3 = new Web3(window.web3.currentProvider);
+        } else {
+            var web3 = new Web3();
+        }
+    </script>
+    <script language="JavaScript" type="text/javascript" src="../js/contractDetails.js"></script>
+
+
+    <!--different links-->
+    <ul class="nav nav-tabs navbar-inverse">
+        <!--Go back to home page-->
+        <li><a href="../index.html">Home </a></li>
+
+        <!--Bank details displayed on this page itself. Have to work on this part-->
+        <li class="active"><a href="#form2">Details</a></li>
+
+        <!--enter the username of a customer to view his kyc details-->
+        <li><a data-toggle="modal" data-target="#viewKYC">View KYC</a></li>
+
+        <!-- modify a persons kyc details-->
+        <li><a href="./form/addForm.html">Add KYC</a></li>
+
+        <!--enter the username of a customer to modify his kyc details-->
+        <li><a data-toggle="modal" data-target="#modifyKYC">Modify KYC</a></li>
+
+        <!--change the rating of an account holder-->
+        <li><a data-toggle="modal" data-target="#modify_rating">Change customer rating</a></li>
+    </ul>
+
+    <!--Bank Details-->
+    <div class="tab-content">
+        <div id="form1" class="tab-pane fade in active">
+            <form class="well form-horizontal" id="contact_form">
+                <fieldset>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Bank Name</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <label class="control-label" id="bank_name">Null</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Bank Registration No</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <label class="control-label" id="reg_no">Null</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">No of KYC checks performed</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <label class="control-label" id="kyc_no">Null</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Bank rating</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <label class="control-label" id="kyc_no"><span class="stars" id = "bank_rating">3.5</span></label>
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <!--view KYC username verification form-->
+    <div id="viewKYC" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!--Modal Content-->
+            <div class="modal-content">
+
+                <!--Modal Body-->
+                <div class="container">
+                    <div class="modal-body">
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <div class="control-group">
+                                    <!-- Username -->
+                                    <label class="control-label" for="username">Username</label>
+                                    <div class="controls">
+                                        <!--verify the username from the block-chain-->
+                                        <input type="text" name="username" placeholder="" class="input-xlarge" id="user_name_v">
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+
+                <!--Modal Footer-->
+                <div class="modal-footer">
+                    <!--On clicking this button verify the username from the block-chain-->
+                    <button type="submit" class="btn btn-primary" data-dismiss="modal" id="log_in" onclick="clickViewKYC()">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modify KYC-->
+    <div id="modifyKYC" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!--Modal Content-->
+            <div class="modal-content">
+
+                <!--Modal Body-->
+                <div class="container">
+                    <div class="modal-body">
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <div class="control-group">
+                                    <!-- Username -->
+                                    <label class="control-label" for="username">Username</label>
+                                    <div class="controls">
+                                        <!--verify the username from the block-chain-->
+                                        <input type="text" name="username" placeholder="" class="input-xlarge" id="user_name_m">
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+
+                <!--Modal Footer-->
+                <div class="modal-footer">
+                    <!--On clicking this button verify the username from the block-chain-->
+                    <button type="submit" class="btn btn-primary" data-dismiss="modal" id="log_in" onclick="clickModifyKYC()">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modify rating-->
+    <div id="modify_rating" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!--Modal Content-->
+            <div class="modal-content">
+
+                <!--Modal Body-->
+                <div class="container">
+                    <div class="modal-body">
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <div class="control-group">
+                                    <!-- Username -->
+                                    <label class="control-label" for="username">Username</label>
+                                    <div class="controls">
+                                        <!--verify the username from the block-chain-->
+                                        <input type="text" name="username" placeholder="" class="input-xlarge" id="user_name_mr">
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+
+                <!--Modal Footer-->
+                <div class="modal-footer">
+
+                    <!--Increase rating-->
+                    <button type="submit" class="btn btn-primary" data-dismiss="modal" onclick="increaseRating()" id="rating_inc">Increase Rating</button>
+
+                    <!--Decrease rating-->
+                    <button type="submit" class="btn btn-primary" data-dismiss="modal" onclick="decreaseRating()" id="rating_dec">Decrease Rating</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
+
+
+
+    <!--Javascript for converting int to star rating-->
+    <script>
+        $.fn.stars = function() {
+            return $(this).each(function() {
+                $(this).html($('<span />').width(Math.max(0, (Math.min(5, parseFloat($(this).html())))) *
+                    16));
+            });
+        }
+        $(function() {
+            $('span.stars').stars();
+        });
+    </script>
+
+
+    <!-- Theme JavaScript -->
+    <script src="../js/agency.min.js"></script>
+
+    <script language="JavaScript" type="text/javascript" src="./bankHomePage.js"></script>
+</body>

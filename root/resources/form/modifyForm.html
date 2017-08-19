@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Form1</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Theme CSS -->
+    <link href="../../css/agency.css" rel="stylesheet">
+
+    <!--encryption decryption scripts-->
+    <script language="JavaScript" type="text/javascript" src="../../RSA_JS/jsbn.js"></script>
+    <script language="JavaScript" type="text/javascript" src="../../RSA_JS/jsbn2.js"></script>
+    <script language="JavaScript" type="text/javascript" src="../../RSA_JS/prng4.js"></script>
+    <script language="JavaScript" type="text/javascript" src="../../RSA_JS/rng.js"></script>
+    <script language="JavaScript" type="text/javascript" src="../../RSA_JS/rsa.js"></script>
+    <script language="JavaScript" type="text/javascript" src="../../RSA_JS/rsa2.js"></script>
+
+</head>
+
+<body>
+
+    <!-- JS source files -->
+    <script type="text/javascript" src="../../dist/web3.min.js"></script>
+    <script type="text/javascript">
+        if (typeof window.web3 !== "undefined" && typeof window.web3.currentProvider !== "undefined") {
+            var web3 = new Web3(window.web3.currentProvider);
+        } else {
+            var web3 = new Web3();
+        }
+    </script>
+    <script language="JavaScript" type="text/javascript" src="../../js/contractDetails.js"></script>
+
+    <ul class="nav nav-tabs navbar-inverse">
+        <li><a href="../bankHomePage.html">Back</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="form1" class="tab-pane fade in active">
+            <form class="well form-horizontal" id="contact_form">
+                <fieldset>
+
+                    <legend align="center">Personal Details</legend>
+                    <!-- Text input-->
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Username</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input name="Username" placeholder="Username" class="form-control" id="username" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Text input-->
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">First Name</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input name="First Name" placeholder="First Name" class="form-control" id="first_name" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Middle Name</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input name="Middle Name" placeholder="Middle Name" class="form-control" id="middle_name" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Last Name</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input name="Last Name" placeholder="Last Name" class="form-control" id="last_name" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Text input-->
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Occupation</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                <input name="Occupation" placeholder="Occupation" class="form-control" type="text" id="occupation">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Income Range</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input name="Income Range" placeholder="Income Range" class="form-control" type="text" id="income_range">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Select Basic -->
+
+
+                    <!-- Text input-->
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Date Of Birth</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input name="Date Of Birth" placeholder="Date Of Birth" class="form-control" type="text" id="DOB">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- radio checks -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Gender</label>
+                        <div class="col-md-4">
+                            <div class="radio">
+                                <label><input type="radio" name="gender" value="male" id = "gender_m" /> Male</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="gender" value="female" id = "gender_f" /> Female</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Full Residential Address</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                <input name="Full Residential Address" placeholder="Full Residential Address" class="form-control" type="text" id="address">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Text area -->
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Phone number 1</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
+                                <input name="Phone number 1" placeholder="Phone number 1" class="form-control" type="text" id="phone_1">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Phone number 2</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
+                                <input name="Phone number 2" placeholder="Phone number 2" class="form-control" type="text" id="phone_2">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Email</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                <input name="Email" placeholder="Email" class="form-control" type="text" id="email">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Country of Residence</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
+                                <input name="Country of Residence" placeholder="Country of Residence" class="form-control" type="text" id="country_res">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form Name -->
+
+
+                    <legend align="center">Bank declaration</legend>
+
+                    <!--Declaration-->
+                    <div class="form-group">
+                        <p align="center">
+                            I agree that I have verified all details as per government regulations.
+                        </p>
+                    </div>
+
+                    <!-- Button -->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label"></label>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-success" id="addKYCSend" onclick="return onClickModify()">Send <span class="glyphicon glyphicon-send"></span></button>
+
+                            <button type="submit" class="btn btn-danger" id="deleteKYC" onclick="return onClickDelete()">Delete <span class="glyphicon glyphicon-send" ></span></button>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </form>
+        </div>
+
+
+    </div>
+    <!-- jQuery -->
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="../../js/agency.min.js"></script>
+
+    <script language="JavaScript" type="text/javascript" src="./modifyForm.js"></script>
+
+</body>
+
+</html>
