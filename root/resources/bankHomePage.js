@@ -67,6 +67,13 @@ function clickModifyKYC() {
         alert("Customer not found in database!");
         return;
     }
+    if (contractInstance.ifAllowed.call(user_name_m, currentEth) == false) {
+        var l = confirm('Access denied! Take permission from the customer to proceed');
+        if (l == true) {
+            contractInstance.addRequest.sendTransaction(user_name_m, currentEth, { from: currentEth, gas: 4700000 });
+        }
+        return;
+    }
     localStorage.user_name_m = user_name_m;
     //redirect to modifyForm.html
     window.location = './form/modifyForm.html';
