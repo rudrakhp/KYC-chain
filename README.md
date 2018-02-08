@@ -9,7 +9,7 @@ Currently we have built this registry over a local test-net that we hosted our p
 # Requirements
 The system must have `NodeJS` and `ethereumjs-testrpc` installed. Be sure the npm version is `>= 5.6.0` and node version is `>= 9.4.0`. Check the version numbers by using the terminal commands `node -v` and `npm -v`. Install `testrpc` using the command line `npm install -g ethereumjs-testrpc` in linux.  
 Links - 
-https://github.com/ethereumjs/testrpc
+https://github.com/ethereumjs/testrpc  
 https://www.npmjs.com/package/ethereumjs-testrpc/tutorial
 # Instructions to run
 1. Open a terminal window and execute the command line `testrpc`.
@@ -19,5 +19,5 @@ https://www.npmjs.com/package/ethereumjs-testrpc/tutorial
 5. Go to the file `root\js\contractDetails.js` and open it using a text editor.
 6. Edit the first line denoting the contract instance address given by the variable `contractAddress` to the 20 byte address obtained in step `4`.
 7. Now the application is ready for use. Make sure the terminal with `testrpc` is up and running. It acts as the local ethereum test network.  
-Video - https://www.youtube.com/watch?v=e9S8yPVr7G4  
+Video - https://www.youtube.com/watch?v=e9S8yPVr7G4   
 Promo - https://www.youtube.com/watch?v=jDSAQV4vPnk
