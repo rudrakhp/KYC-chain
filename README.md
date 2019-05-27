@@ -6,8 +6,13 @@ Know your customer (KYC) checks are currently an extremely time consuming and co
 KYC-chain eliminates the redundant KYC checks that banks currently perform by maintaining a common secure database in a block-chain. The nature of a block-chain ensures that unauthorized changes to the data are automatically invalidated. The proof-of-reputation concept makes the verification process more robust.
 
 Currently we have built this registry over a local test-net that we hosted our personal laptops. So, there are a few limitations regarding scalability such as the maximum number of banks that can be registered which is currently capped at 10 and so on. Going ahead we plan to deploy this registry over the Ethereum network to increase its scalability.
+
 # Requirements
-The system must have `NodeJS` and `ethereumjs-testrpc` installed. Be sure the npm version is `>= 5.6.0` and node version is `>= 9.4.0`. Check the version numbers by using the terminal commands `node -v` and `npm -v`. Install `testrpc` using the command line `npm install -g ganache-cli` or `yarn global add ganache-cli ` in linux.  
+1. Nodejs - v10.15.3
+2. npm - v6.9.0
+3. solc - v0.4.26
+4. web3 - v0.20.1
+
 Links -
 https://github.com/ethereumjs/testrpc  
 https://www.npmjs.com/package/ganache-cli
