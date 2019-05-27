@@ -12,6 +12,7 @@ Currently we have built this registry over a local test-net that we hosted our p
 2. npm - v6.9.0
 3. solc - v0.4.26
 4. web3 - v0.20.1
+5. ganache-cli - v6.4.3
 
 Links -
 https://github.com/ethereumjs/testrpc  
