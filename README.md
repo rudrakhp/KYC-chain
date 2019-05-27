@@ -10,13 +10,10 @@ Currently we have built this registry over a local test-net that we hosted our p
 # Requirements
 1. Nodejs - v10.15.3
 2. npm - v6.9.0
-3. solc - v0.4.26
-4. web3 - v0.20.1
+3. solc - v0.4.26 `npm install solc@0.4.26`
+4. web3 - v0.20.1 `npm install web3@0.20.1`
 5. ganache-cli - v6.4.3
 
-Links -
-https://github.com/ethereumjs/testrpc  
-https://www.npmjs.com/package/ganache-cli
 # Instructions to run
 1. Open a terminal window and execute the command line `ganache-cli`.
 2. Open another terminal and go to the `root` directory.
